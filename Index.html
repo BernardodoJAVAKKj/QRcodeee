@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerador de QR Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1023;
+      color: #e5e7eb;
+    }
+    h1 { font-size: 32px; margin-bottom: 20px; }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #2563eb;
+      color: white;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cole o link para gerar o QR Code</h1>
+  
+ 
+  <input type="text" id="linkInput" placeholder="Cole o link aqui" />
+
+  
+  <button onclick="gerarQRCode()">Gerar QR Code</button>
+
+
+  <img id="qrcode" style="display:none;" />
+
+  <script>
+    function gerarQRCode() {
+      const link = document.getElementById("linkInput").value;
+      if (!link) {
+        alert("Por favor, cole um link!");
+        return;
+      }
+
+      const url = "http://localhost:8080/api/qrcode?link=" + encodeURIComponent(link);
+
+      const img = document.getElementById("qrcode");
+      img.src = url;
+      img.style.display = "block";
+    }
+  </script>
+</body>
+</html>

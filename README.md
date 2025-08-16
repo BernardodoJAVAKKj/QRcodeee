@@ -2,7 +2,7 @@ QR Code API
 
 A simple API to generate QR Codes from URLs or text.
 
-Features
+🌟 Features
 
 Generate QR Codes from a link or text.
 
@@ -10,7 +10,7 @@ Return the QR Code as a PNG image.
 
 Simple and fast API for web or mobile integration.
 
-Endpoints
+🔗 Endpoints
 GET /api/qrcode
 
 Generates a QR Code from the provided link.
@@ -29,7 +29,7 @@ Response:
 
 Returns the QR Code image in PNG format.
 
-Technologies
+🛠 Technologies
 
 Java 17+
 
@@ -37,7 +37,7 @@ Spring Boot
 
 ZXing (for QR Code generation)
 
-How to Run
+🚀 How to Run
 
 Clone the project:
 

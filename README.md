@@ -55,6 +55,3 @@ Run the application:
 
 
 Access the endpoint via browser or tools like Postman.
-
-Example HTML Usage
-<img src="http://localhost:8080/api/qrcode?link=https://www.google.com" alt="QR Code">
